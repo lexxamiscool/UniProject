@@ -3,6 +3,7 @@ package ProyectoUni.controllers;
 import java.util.HashMap;
 
 import ProyectoUni.models.User;
+import ProyectoUni.utils.DataStorage;
 import ProyectoUni.utils.Validation;
 
 public class LoginController implements ILoginController {
@@ -19,8 +20,8 @@ public class LoginController implements ILoginController {
        
         this.loginUser.put("username", username);
         this.loginUser.put("password", password);
-        this.validation.setLoginUser(loginUser);
-        this.validation.validation();
+        DataStorage.getInstance().setLoginData(loginUser);
+        validation.validation();
     }
     
    

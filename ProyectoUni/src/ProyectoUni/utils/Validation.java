@@ -11,8 +11,8 @@ public class Validation {
     }
     
     public boolean validation() {
-        System.out.println("Login user: " + loginUser.get("username"));
-        System.out.println("Register user: " + registerUser.get("username"));
+        System.out.println(DataStorage.getInstance().getLoginData().get("username"));
+        System.out.println(DataStorage.getInstance().getUserData().get("username"));
         return true;
     }
     

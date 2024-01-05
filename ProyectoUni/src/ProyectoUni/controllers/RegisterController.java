@@ -3,6 +3,7 @@ package ProyectoUni.controllers;
 import java.util.HashMap;
 
 import ProyectoUni.models.Register;
+import ProyectoUni.utils.DataStorage;
 import ProyectoUni.utils.Validation;
 
 public class RegisterController  implements IRegisterController {
@@ -23,7 +24,7 @@ public class RegisterController  implements IRegisterController {
         
        this.saveRegisterPerson.put("username", username);
        this.saveRegisterPerson.put("password", password);
-       this.validation.setRegisterUser(saveRegisterPerson);
+       DataStorage.getInstance().setUserData(saveRegisterPerson);
        
     }
     
